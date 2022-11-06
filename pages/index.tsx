@@ -72,12 +72,10 @@ export default function Home({ data }: any) {
 	const filterList = () => {
 		let arrayList = [...data.response];
 		if (value?.sortName && value.sortName == "asc") {
-			console.log(arrayList, "srot by name asc");
 			arrayList = arrayList.sort((a, b) => a.title.localeCompare(b.title));
 		} else if (value?.sortName && value.sortName == "desc") {
 			arrayList = arrayList.sort((a, b) => b.title.localeCompare(a.title));
 		}
-		console.log("value number", value?.number);
 
 		if (value?.number && value.number == "100-500") {
 			arrayList = arrayList.filter((o) => {

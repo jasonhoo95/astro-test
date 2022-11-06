@@ -11,14 +11,9 @@ export default function Favourite() {
 	});
 
 	useEffect(() => {
-		console.log("schedule value", value);
-	}, [value]);
-
-	useEffect(() => {
 		if (favourites) {
 			setState({ favourite: favourites });
 		}
-		console.log(state.favourite, "favourite");
 	}, [favourites]);
 	return (
 		<div className="max-w-[1200px] ml-auto mr-auto p-5">

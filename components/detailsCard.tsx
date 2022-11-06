@@ -20,7 +20,6 @@ export default function DetailsCard({ data }: any) {
 						)
 					) {
 						betweenKey = key;
-						console.log(betweenKey, "between key");
 					} else if (data.schedule[v].length == 1) {
 						itemsList.push(o);
 					}
@@ -30,7 +29,6 @@ export default function DetailsCard({ data }: any) {
 						betweenKey <= key &&
 						data.schedule[v].length - 1 >= key
 					) {
-						console.log(o, "item o");
 						itemsList.push({
 							...o,
 							datetime: moment(o.datetime).format("hh:mma"),
@@ -58,7 +56,7 @@ export default function DetailsCard({ data }: any) {
 					});
 				}
 			});
-			console.log(dataList, "data list");
+
 			setSchedule(dataList);
 		}
 	}, [data]);

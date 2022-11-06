@@ -18,7 +18,7 @@ export const favouriteSlice = createSlice({
 				state.favourites.map((o: any, key: number) => {
 					if (o.id == action.payload.id) {
 						state.favourites.splice(key, 1);
-						console.log("splice");
+
 						check = false;
 					}
 				});
