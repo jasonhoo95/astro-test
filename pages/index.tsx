@@ -90,9 +90,11 @@ export default function Home({ data }: any) {
 		const searchName = search?.toLowerCase();
 		if (searchName) {
 			arrayList = arrayList.filter((o) => {
+				let numberstring = "ch" + o.stbNumber;
 				return (
 					o.title.toLowerCase().includes(searchName) ||
-					o.stbNumber.toLowerCase().includes(searchName)
+					o.stbNumber.toLowerCase().includes(searchName) ||
+					numberstring.includes(searchName)
 				);
 			});
 		}
