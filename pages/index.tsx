@@ -97,15 +97,14 @@ export default function Home({ data }: any) {
 			});
 		}
 
-		if (value) {
-			arrayList = arrayList.filter((o) => {
-				return (
-					(value && value.language ? value.language == o.language : true) &&
-					(value && value.category ? value.category == o.category : true) &&
-					(value && value.isHD != null ? o.isHd == value.isHD : true)
-				);
-			});
-		}
+		arrayList = arrayList.filter((o) => {
+			return (
+				(value && value.language ? value.language == o.language : true) &&
+				(value && value.category ? value.category == o.category : true) &&
+				(value && value.isHD != null ? o.isHd == value.isHD : true)
+			);
+		});
+
 		setState({ data: arrayList });
 	};
 

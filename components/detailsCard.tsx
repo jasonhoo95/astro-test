@@ -61,7 +61,7 @@ export default function DetailsCard({ data }: any) {
 		}
 	}, [data]);
 	return (
-		<div>
+		<div className="p-5">
 			<div className="flex items-center p-5">
 				<div className="w-[10%]">
 					<img
@@ -110,7 +110,9 @@ export default function DetailsCard({ data }: any) {
 				{schedule?.map((o: any, mainKey: number) => {
 					return (
 						<div
-							className={`tab-pane fade ${mainKey == 0 ? "active show" : null}`}
+							className={`tab-pane px-3 fade ${
+								mainKey == 0 ? "active show" : null
+							}`}
 							id={o.date}
 							role="tabpanel"
 							aria-labelledby={`${o.date}-tab`}>

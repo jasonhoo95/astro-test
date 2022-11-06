@@ -51,6 +51,7 @@ export default function ListCard({ listData, schedule }: any) {
 					<div className="ml-3">
 						<div>CH{listData.stbNumber}</div>
 						<div className="font-bold">{listData.title}</div>
+						<div className="font-bold">({listData.category})</div>
 					</div>
 				</div>
 				<hr />
