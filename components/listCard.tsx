@@ -61,7 +61,9 @@ export default function ListCard({ listData, schedule }: any) {
 							return o.schedule.map((u: any, key: number) => {
 								if (key == 0 && u) {
 									return (
-										<div className="flex my-3">
+										<div
+											key={key}
+											className="flex my-3">
 											<>
 												<div className="max-w-[4.5rem] mr-3 basis-[4.5rem]">
 													On Now
@@ -72,7 +74,9 @@ export default function ListCard({ listData, schedule }: any) {
 									);
 								} else if (!u) {
 									return (
-										<div className="flex my-3">
+										<div
+											key={key}
+											className="flex my-3">
 											<>
 												<div className="max-w-[4.5rem] mr-3 basis-[4.5rem]">
 													On Now
@@ -85,7 +89,9 @@ export default function ListCard({ listData, schedule }: any) {
 									);
 								} else {
 									return (
-										<div className="flex my-3">
+										<div
+											key={key}
+											className="flex my-3">
 											<>
 												<div
 													className="text-gray-400 max-w-[4.5rem] mr-3 basis-[4.5rem]"

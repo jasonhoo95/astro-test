@@ -167,11 +167,12 @@ export default function Home({ data }: any) {
 				<div className="grid md:grid-cols-3 grid-cols-1 gap-4 ">
 					{state.data?.map((o: any, key: any) => {
 						return (
-							<ListCard
-								key={key}
-								schedule={schedule}
-								listData={o}
-							/>
+							<div key={key}>
+								<ListCard
+									schedule={schedule}
+									listData={o}
+								/>
+							</div>
 						);
 					})}
 				</div>

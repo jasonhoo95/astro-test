@@ -175,8 +175,10 @@ export default function ModalComponent({ open, setOpen, data }: any) {
 												Choose a size
 											</RadioGroup.Label>
 											<div className="grid md:grid-cols-3 grid-cols-1 gap-3">
-												{language?.map((option: any) => (
-													<div className="flex items-center space-x-2 text-m">
+												{language?.map((option: any, key: number) => (
+													<div
+														key={key}
+														className="flex items-center space-x-2 text-m">
 														<RadioGroup.Option
 															value={option}
 															className={({ active, checked }) =>
@@ -209,8 +211,10 @@ export default function ModalComponent({ open, setOpen, data }: any) {
 												Choose a size
 											</RadioGroup.Label>
 											<div className="grid md:grid-cols-3 grid-cols-1 gap-3">
-												{category?.map((option: any) => (
-													<div className="flex items-center space-x-2 text-m">
+												{category?.map((option: any, key: number) => (
+													<div
+														key={key}
+														className="flex items-center space-x-2 text-m">
 														<RadioGroup.Option
 															value={option}
 															className={({ active, checked }) =>
